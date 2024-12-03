@@ -7,7 +7,7 @@ import game.items as items
 from game.context import Context
 import game.config as config
 
-skill_icons = {"brawling": "👊 ", "swords": "⚔️  ", "melee": "🏏 ", "guns": "🔫 ", "cannons": "🏴‍☠️   ", "swimming": "🏊 "}
+skill_icons = {"brawling": "👊 ", "swords": "⚔️  ", "melee": "🏏 ", "guns": "🔫 ", "cannons": "🏴‍☠️   ", "swimming": "🏊 ", "bombs":"💣"}
 
 class CrewMate(Context, superclasses.CombatCritter):
     '''Describes a pirate crewmate. The player controls these.'''
@@ -32,6 +32,7 @@ class CrewMate(Context, superclasses.CombatCritter):
         self.skills["guns"] = random.randrange(10,101)
         self.skills["cannons"] = random.randrange(10,101)
         self.skills["swimming"] = random.randrange(10,101)
+        self.skills["bombs"] = random.randrange(10,101)
 
         #list of equipped items. Currently only used in combat.
         self.items = []
