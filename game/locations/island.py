@@ -110,7 +110,7 @@ class ManEatingMonkeys (event.Event):
             result["newevents"] = [ self ]
         else:
             result["newevents"] = [ ]
-        config.the_player.ship.food += n_appearing*5
+        config.the_player.ship.food += n_appearing*5 
 
         return result
 

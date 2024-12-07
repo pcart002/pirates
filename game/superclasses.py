@@ -1,4 +1,3 @@
-from __future__ import annotations
 import game.display as display
 from game.display import menu
 import random

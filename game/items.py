@@ -1,5 +1,4 @@
 from game.display import menu
-import game.combat as combat
 import game.context as context
 import game.superclasses as superclasses
 import random

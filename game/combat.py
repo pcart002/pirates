@@ -53,7 +53,7 @@ class Combat():
 
 
 class Monster(superclasses.CombatCritter):
-    def __init__ (self, name: str, hp: int, attacks: dict[str, list], speed: float):
+    def __init__ (self, name, hp, attacks, speed):
         super().__init__(name, hp, speed)
         self.attacks = attacks
         self.cur_move = 0
