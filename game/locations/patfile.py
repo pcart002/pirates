@@ -289,7 +289,7 @@ class Reef (location.SubLocation):
 
             if (verb == "fish"):
                 fishing = random.randint(1,7)
-                if fishing = 7:
+                if fishing == 7:
                     display.announce ("You caught a fish!")
                     config.the_player.ship.food += 3
                 else:
