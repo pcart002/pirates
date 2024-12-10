@@ -163,7 +163,7 @@ class Wet_Cave (location.SubLocation):
         display.announce ("You and your pirate crew stand at the entrance of a dark, dripping cave.")
         if verb == "explore":
             n = random.radint(1,2)
-            if n != 2
+            if n != 2:
                 display.announce ("You and your crewmates explore the cave. You see the skeleton of an old pirate clutching {self.item_on_body.name}")
 
 
@@ -287,7 +287,7 @@ class Reef (location.SubLocation):
         if (verb == "east"):
             display.announce ("You and your crew find a fishing rod. Would you like to fish?")
 
-            if (verb == "fish")
+            if (verb == "fish"):
                 fishing = random.randint(1,7)
                 if fishing = 7:
                     display.announce ("You caught a fish!")
