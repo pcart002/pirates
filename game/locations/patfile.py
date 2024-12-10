@@ -75,7 +75,7 @@ class Sparkle(items.Item):
 
 class Treasure:
     def __init__ (self):
-        display.announce ("You have found Treasure!")
+        display.announce ("You have found {self.loot}")
         chance = random.randint(1,100)
         if chance < 10:
             self.loot = Bomb
@@ -87,6 +87,7 @@ class Treasure:
             self.loot = item.BelayingPin
         elif chance < 60:
             config.the_player.ship.food += 1
+            self.loot = None
         else:
             self.loot = sparkle
 
@@ -150,9 +151,9 @@ class Wet_Cave (location.SubLocation):
         self.verbs['east'] = self
         self.verbs['west'] = self
 
-        self.verbs['explore'] = self
+        self.verbs['explore'] = self #add "explore to verbs list"
 
-        self.item_on_body = Sparkles()
+        self.item_on_body = Treasure()
 
         self.event_chance = 99
         self.events.append(Angry_Crabs())
@@ -164,6 +165,7 @@ class Wet_Cave (location.SubLocation):
             n = random.radint(1,2)
             if n != 2
                 display.announce ("You and your crewmates explore the cave. You see the skeleton of an old pirate clutching {self.item_on_body.name}")
+
 
     def process_verb (self, verb, cmd_list, nouns):
         if (verb == "east"):
