@@ -74,8 +74,8 @@ class Sparkle(items.Item):
         super().__init__("Diamonds and Pearls", random.radint(100,300))
 
 class Treasure:
-    display.announce ("You have found Treasure!")
     def __init__ (self):
+        display.announce ("You have found Treasure!")
         chance = random.randint(1,100)
         if chance < 10:
             self.loot = Bomb
